@@ -5,6 +5,6 @@ export const conn = async () =>{
         await mongoose.connect("mongodb://127.0.0.1/Concesionaria")
         console.log("Conexión exitosa a bd");
     } catch (error) {
-        console.log(error);
+        console.log("Error de conexión a la base de datos:",error);
     }
 }

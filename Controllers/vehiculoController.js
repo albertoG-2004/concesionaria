@@ -17,6 +17,7 @@ export const registro = async (req, res) => {
         })
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al registrar el vehiculo"});
+        console.log(error);
     }
 }
 
@@ -40,6 +41,7 @@ export const actualizar = async (req, res) =>{
         .catch((error)=>res.json ({message:error}));
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al actualizar el vehiculo"});
+        console.log(error);
     }
 }
 
@@ -48,9 +50,10 @@ export const eliminar = async (req, res) =>{
 
     try {
         const info = await Vehiculo.findByIdAndDelete(id)
-        res.json(info);
+        res.send("SE ha eliminado el vehiculo");
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al eliminar el vehiculo"});
+        console.log(error);
     }
 }
 
@@ -64,6 +67,18 @@ export const buscar = async (req, res) =>{
         .then((data)=>res.json(data))
         .catch((error)=>res.json ({message:error}));
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al actualizar el vehiculo"});
+        res.status(500).json({error: "Ha surgido un problema al buscar el vehiculo"});
+        console.log(error);
+    }
+}
+
+export const buscarTodos = async (req, res) =>{
+    try {
+        Vehiculo.find()
+        .then((data)=>res.json(data))
+        .catch((error)=>res.json ({message:error}));
+    } catch (error) {
+        res.status(500).json({error: "Ha surgido un problema buscando los vehiculos"});
+        console.log(error);
     }
 }
