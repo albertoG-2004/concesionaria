@@ -1,6 +1,6 @@
 import Historial from '../Models/historialModel';
 
- export const registro = async (req, res) =>{
+export const registro = async (req, res) =>{
     const {venta, cliente}=req.body;
     try {
         const newHistorial = new Historial({
