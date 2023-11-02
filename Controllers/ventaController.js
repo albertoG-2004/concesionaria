@@ -34,7 +34,7 @@ import Venta from '../Models/ventaModel.js'
         .then((data)=>res.json(data))
         .catch((error)=>res.json({message:error}));
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al actuzalizar el vehiculo"});
+        res.status(500).json({error: "Ha surgido un problema al actuzalizar la venta"});
     }
 }
 
@@ -45,7 +45,7 @@ export const eliminar = async (req, res) =>{
         const info = await Venta.findByIdAndDelete({
             _id: id
         })
-        res.json(info);
+        res.send("Venta eliminada");
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al eliminar la venta"});
     }
@@ -61,6 +61,16 @@ export const buscar = async (req, res) =>{
         .then((data)=>res.json(data))
         .catch((error)=>res.json({message:error}));
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al buscar al vehiculo"});
+        res.status(500).json({error: "Ha surgido un problema al buscar la venta"});
+    }
+}
+
+export const buscarVentas = async (req, res) =>{
+    try {
+        Venta.find()
+        .then((data)=>res.json(data))
+        .catch((error)=>res.json({message:error}));
+    } catch (error) {
+        res.status(500).json({error: "Ha surgido un problema al buscar las venta"});
     }
 }

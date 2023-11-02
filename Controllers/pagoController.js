@@ -45,7 +45,7 @@ export const eliminar = async (req, res) =>{
         const info = await cliente.findByIdAndDelete(id)
         res.json(info);
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al eliminar el cliente"});
+        res.status(500).json({error: "Ha surgido un problema al eliminar el pago"});
     }
 }
 
@@ -59,6 +59,16 @@ export const buscar = async (req, res) =>{
         .then((data)=>res.json(data))
         .catch((error)=>res.json ({message:error}));
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al actualizar el cliente"});
+        res.status(500).json({error: "Ha surgido un problema al buscar el pago"});
+    }
+}
+
+export const TodosPagos = async (req, res) =>{
+    try {
+        cliente.find()
+        .then((data)=>res.json(data))
+        .catch((error)=>res.json ({message:error}));
+    } catch (error) {
+        res.status(500).json({error: "Ha surgido un problema al buscar el pago"});
     }
 }

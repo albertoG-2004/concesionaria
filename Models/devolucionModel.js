@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const devolucionSchema = new mongoose.model({
+const devolucionSchema = new mongoose.Schema({
     cliente:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Cliente'

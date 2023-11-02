@@ -1,0 +1,31 @@
+#---------------------- SON LAS RUTAS Y CONSULTAS DEL HISTORIAL
+
+###
+GET http://localhost:3001/concesionaria/Historial HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3001/concesionaria/buscarHistorial/ HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/concesionaria/registro HTTP/1.1
+Content-Type: application/json
+
+{
+    "venta":,
+    "cliente":
+}
+
+###
+PUT http://localhost:3001/concesionaria/actualizarHistorial/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "venta":,
+    "cliente":
+}
+
+###
+DELETE http://localhost:3001/concesionaria/eliminarHistorial/ HTTP/1.1
+Content-Type: application/json

@@ -1,0 +1,33 @@
+#---------------------- SON LAS RUTAS Y CONSULTAS DE VENDEDOR
+
+###
+GET http://localhost:3001/concesionaria/TodosVendedores HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3001/concesionaria/buscarvendedor/2 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/concesionaria/registrovendedor HTTP/1.1
+Content-Type: application/json
+
+{
+    "noVendedor": 4,
+    "nombre": "Paolis",
+    "apellidoPaterno": "Mayorga",
+    "apellidoMaterno":"Aguirre",
+    "turno": "Matutino"
+}
+
+###
+PUT http://localhost:3001/concesionaria/actualizarturno/6542d50930715e072b865ee0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "turno": "Vespertino"
+}
+
+###
+DELETE http://localhost:3001/concesionaria/eliminarvendedor/4 HTTP/1.1
+Content-Type: application/json

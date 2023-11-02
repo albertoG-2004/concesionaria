@@ -47,7 +47,7 @@ export const eliminar = async (req, res) =>{
         const info = await Vendedor.findOneAndDelete({
             noVendedor: no
         })
-        res.json(info);
+        res.send("Vendedor eliminado");
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al eliminar al vendedor"});
     }
@@ -64,5 +64,15 @@ export const buscar = async (req, res) =>{
         .catch((error)=>res.json({message:error}));
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al buscar al vendedor"});
+    }
+}
+
+export const buscarVendedores = async (req, res) =>{
+    try {
+        Vendedor.find()
+        .then((data)=>res.json(data))
+        .catch((error)=>res.json({message:error}));
+    } catch (error) {
+        res.status(500).json({error: "Ha surgido un problema al buscar a los vendedorres"});
     }
 }
