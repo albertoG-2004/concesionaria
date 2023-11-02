@@ -1,0 +1,33 @@
+#---------------------- SON LAS RUTAS Y CONSULTAS DE DEVOLUCIONES
+###
+GET http://localhost:3001/concesionaria/todasDevoluciones HTTP/1.1
+Content-Type: application/json
+
+### 
+GET http://localhost:3001/concesionaria/buscardevoluciones/65430c4894b05f9c48793ae8 HTTP/1.1
+
+###
+POST http://localhost:3001/concesionaria/registrodevoluciones HTTP/1.1
+Content-Type: application/json
+
+{
+    "cliente":"65420d9853bb45a7472f0695",
+    "noVendedor":1,
+    "vehiculo":"65421951ba13102ea75ce42e",
+    "pago":"65421951ba13102ea75ce42e"
+}
+
+###
+PUT  http://localhost:3001/concesionaria/actualizardevoluciones/65430c4894b05f9c48793ae8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "cliente":"65420d9853bb45a7472f0695",
+    "noVendedor":1,
+    "vehiculo":"65421d020c0d40e4b201ec6e",
+    "pago":"65421951ba13102ea75ce42e"
+}
+
+###
+DELETE http://localhost:3001/concesionaria/eliminardevoluciones/65430c4894b05f9c48793ae8 HTTP/1.1
+Content-Type: application/json

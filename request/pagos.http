@@ -1,0 +1,35 @@
+#---------------------- SON LAS RUTAS Y CONSULTAS DE PAGOS
+
+###
+GET http://localhost:3001/concesionaria/TodosPagos HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3001/concesionaria/buscarpago/ HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/concesionaria/registropago HTTP/1.1
+Content-Type: application/json
+
+{
+    "cliente":,
+    "noVendedor":,
+    "monto":,
+    "estatus":
+}
+
+###
+PUT http://localhost:3001/concesionaria/actualizarpago/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "cliente":,
+    "noVendedor":,
+    "monto":,
+    "estatus":
+}
+
+###
+DELETE http://localhost:3001/concesionaria/eliminarpago/ HTTP/1.1
+Content-Type: application/json

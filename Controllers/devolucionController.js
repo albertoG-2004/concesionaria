@@ -9,12 +9,13 @@ import Devolucion from '../Models/DevolucionModel.js'
             vehiculo,
             pago
         });
-        newVenta.save();
+        newDevolucion.save();
         res.json({
             newDevolucion
         })
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al registrar la devolución"});
+        console.log(error);
     }
  }
 
@@ -34,7 +35,8 @@ import Devolucion from '../Models/DevolucionModel.js'
         .then((data)=>res.json(data))
         .catch((error)=>res.json({message:error}));
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al actuzalizar el vehiculo"});
+        res.status(500).json({error: "Ha surgido un problema al actuzalizar la devolucion"});
+        console.log(error);
     }
 }
 
@@ -45,9 +47,10 @@ export const eliminar = async (req, res) =>{
         const info = await Devolucion.findByIdAndDelete({
             _id: id
         })
-        res.json(info);
+        res.send("Devolución eliminada");
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al eliminar la devolucion"});
+        console.log(error);
     }
 }
 
@@ -61,6 +64,18 @@ export const buscar = async (req, res) =>{
         .then((data)=>res.json(data))
         .catch((error)=>res.json({message:error}));
     } catch (error) {
-        res.status(500).json({error: "Ha surgido un problema al buscar al cliente"});
+        res.status(500).json({error: "Ha surgido un problema al buscar la devolucion"});
+        console.log(error);
+    }
+}
+
+export const TodasDevoluciones = async (req, res) =>{
+    try {
+        Devolucion.find()
+        .then((data)=>res.json(data))
+        .catch((error)=>res.json({message:error}));
+    } catch (error) {
+        res.status(500).json({error: "Ha surgido un problema al buscar las devoluciones"});
+        console.log(error);
     }
 }
