@@ -1,4 +1,4 @@
-import Pago from '../Models/pagoModel';
+import Pago from '../Models/pagoModel.js';
 
 export const registro = async (req, res) =>{
     const {cliente,noVendedor,monto,estatus}=req.body;
