@@ -9,7 +9,7 @@ export const registro = async (req, res) =>{
             monto,
             estatus
         });
-        newVenta.save();
+        newPago.save();
         res.json({
             newPago
         })
@@ -23,7 +23,7 @@ export const registro = async (req, res) =>{
     const {estatus} = req.body;
 
     try {
-        Venta.updateOne({
+        Pago.updateOne({
             _id: id
         },
         {
@@ -42,8 +42,8 @@ export const eliminar = async (req, res) =>{
     const id = req.params.id;
 
     try {
-        const info = await cliente.findByIdAndDelete(id)
-        res.json(info);
+        const info = await Pago.findByIdAndDelete(id)
+        res.send("Se limino el pago del cliente exitosamente");
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al eliminar el pago"});
     }
@@ -53,7 +53,7 @@ export const buscar = async (req, res) =>{
     const id = req.params.id;
     
     try {
-        cliente.find({
+        Pago.find({
            _id:id
         })
         .then((data)=>res.json(data))
@@ -65,7 +65,7 @@ export const buscar = async (req, res) =>{
 
 export const TodosPagos = async (req, res) =>{
     try {
-        cliente.find()
+        Pago.find()
         .then((data)=>res.json(data))
         .catch((error)=>res.json ({message:error}));
     } catch (error) {

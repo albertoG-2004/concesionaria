@@ -5,7 +5,7 @@ GET http://localhost:3001/concesionaria/TodosPagos HTTP/1.1
 Content-Type: application/json
 
 ###
-GET http://localhost:3001/concesionaria/buscarpago/ HTTP/1.1
+GET http://localhost:3001/concesionaria/buscarpago/654332139b46101291ea15b3 HTTP/1.1
 Content-Type: application/json
 
 ###
@@ -13,23 +13,23 @@ POST http://localhost:3001/concesionaria/registropago HTTP/1.1
 Content-Type: application/json
 
 {
-    "cliente":,
-    "noVendedor":,
-    "monto":,
-    "estatus":
+    "cliente":"65420d9853bb45a7472f0695",
+    "noVendedor":1,
+    "monto":80000,
+    "estatus":"Activo"
 }
 
 ###
-PUT http://localhost:3001/concesionaria/actualizarpago/ HTTP/1.1
+PUT http://localhost:3001/concesionaria/actualizarpago/654332139b46101291ea15b3 HTTP/1.1
 Content-Type: application/json
 
 {
-    "cliente":,
-    "noVendedor":,
-    "monto":,
-    "estatus":
+    "cliente":"65420d9853bb45a7472f0695",
+    "noVendedor":1,
+    "monto":90000,
+    "estatus":"Activo"
 }
 
 ###
-DELETE http://localhost:3001/concesionaria/eliminarpago/ HTTP/1.1
+DELETE http://localhost:3001/concesionaria/eliminarpago/654332139b46101291ea15b3 HTTP/1.1
 Content-Type: application/json

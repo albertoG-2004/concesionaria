@@ -5,7 +5,7 @@ GET http://localhost:3001/concesionaria/Historial HTTP/1.1
 Content-Type: application/json
 
 ###
-GET http://localhost:3001/concesionaria/buscarHistorial/ HTTP/1.1
+GET http://localhost:3001/concesionaria/buscarHistorial/654334bb43e4153705c14492 HTTP/1.1
 Content-Type: application/json
 
 ###
@@ -13,19 +13,19 @@ POST http://localhost:3001/concesionaria/registro HTTP/1.1
 Content-Type: application/json
 
 {
-    "venta":,
-    "cliente":
+    "venta":"6543338e39663d811120cf9b",
+    "cliente":"65420ee853bb45a7472f0698"
 }
 
 ###
-PUT http://localhost:3001/concesionaria/actualizarHistorial/ HTTP/1.1
+PUT http://localhost:3001/concesionaria/actualizarHistorial/654334bb43e4153705c14492 HTTP/1.1
 Content-Type: application/json
 
 {
-    "venta":,
-    "cliente":
+    "venta":"6543338e39663d811120cf9b",
+    "cliente":"65420ee853bb45a7472f0698"
 }
 
 ###
-DELETE http://localhost:3001/concesionaria/eliminarHistorial/ HTTP/1.1
+DELETE http://localhost:3001/concesionaria/eliminarHistorial/654334bb43e4153705c14492 HTTP/1.1
 Content-Type: application/json

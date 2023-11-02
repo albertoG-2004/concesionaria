@@ -5,7 +5,7 @@ GET http://localhost:3001/concesionaria/Todasventa HTTP/1.1
 Content-Type: application/json
 
 ###
-GET http://localhost:3001/concesionaria/buscarventa/ HTTP/1.1
+GET http://localhost:3001/concesionaria/buscarventa/6543338e39663d811120cf9b HTTP/1.1
 Content-Type: application/json
 
 ###
@@ -15,21 +15,21 @@ Content-Type: application/json
 {
     "vehiculo":"65421d020c0d40e4b201ec6e",
     "noVendedor":3,
-    "pago":,
-    "cliente":,
+    "pago":"654332139b46101291ea15b3",
+    "cliente":"65420ee853bb45a7472f0698"
 }
 
 ###
-PUT http://localhost:3001/concesionaria/actualizarventa/ HTTP/1.1
+PUT http://localhost:3001/concesionaria/actualizarventa/6543338e39663d811120cf9b HTTP/1.1
 Content-Type: application/json
 
 {
-    "vehiculo":,
-    "noVendedor":,
-    "pago":,
-    "cliente":,
+    "vehiculo":"65421d020c0d40e4b201ec6e",
+    "noVendedor":3,
+    "pago":"654332139b46101291ea15b3",
+    "cliente":"65420ee853bb45a7472f0698",
 }
 
 ###
-DELETE http://localhost:3001/concesionaria/eliminarventa/ HTTP/1.1
+DELETE http://localhost:3001/concesionaria/eliminarventa/6543338e39663d811120cf9b HTTP/1.1
 Content-Type: application/json

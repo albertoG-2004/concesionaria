@@ -1,4 +1,4 @@
-import Historial from '../Models/historialModel';
+import Historial from '../Models/historialModel.js';
 
 export const registro = async (req, res) =>{
     const {venta, cliente}=req.body;
@@ -63,12 +63,13 @@ export const buscarHistorial = async (req, res) =>{
     }
 }
 
-export const Historial = async (req, res) =>{
+export const TodoHistorial = async (req, res) =>{
     try {
         Historial.find()
         .then((data)=>res.json(data))
         .catch((error)=>res.json({message:error}));
     } catch (error) {
         res.status(500).json({error: "Ha surgido un problema al buscar el historial"});
+        console.log(error);
     }
 }

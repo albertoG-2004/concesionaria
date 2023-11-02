@@ -6,6 +6,7 @@ import rutasVendedor from './Routes/vendedorRoute.js';
 import rutasDevolucion from './Routes/devolucionesRoute.js';
 import rutasVenta from './Routes/ventaRoute.js';
 import rutasPago from './Routes/pagoRouter.js';
+import rutasHistorial from './Routes/historialRoute.js';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use("/concesionaria", rutasVehiculo);
 app.use("/concesionaria", rutasVendedor);
 app.use("/concesionaria", rutasVenta);
 app.use("/concesionaria", rutasPago);
+app.use("/concesionaria", rutasHistorial);
 
 conn();
 

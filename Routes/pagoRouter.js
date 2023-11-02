@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {registro, actualizar, eliminar, buscar, TodosPagos} from '../Controllers/pagoController'
+import {registro, actualizar, eliminar, buscar, TodosPagos} from '../Controllers/pagoController.js';
 const rutasPago = Router();
 
 rutasPago.post('/registropago', registro);
